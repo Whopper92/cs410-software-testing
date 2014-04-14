@@ -1,4 +1,4 @@
-Test Run By ubuntu on Mon Apr 14 01:53:08 2014
+Test Run By ubuntu on Mon Apr 14 16:27:41 2014
 Native configuration is x86_64-unknown-linux-gnu
 
 		=== clic tests ===
@@ -54,7 +54,16 @@ PASS: erfc(2)
 PASS: G(3)
 PASS: (2
 PASS: tan(2)
+PASS: \h
+PASS: \v
+PASS: \f
+PASS: \c
+PASS: \g
+PASS: 
+PASS: 1==2
+PASS: 1=2
+PASS: a=2
 
 		=== clic Summary ===
 
-# of expected passes		46
+# of expected passes		55

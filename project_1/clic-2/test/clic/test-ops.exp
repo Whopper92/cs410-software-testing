@@ -1,6 +1,7 @@
 set tool "clic"
-
+set exp_internal 1
 set testdata {
+
   {"e"      "2.718282" }
   {"PI"     "3.141593" }
 
@@ -55,6 +56,17 @@ set testdata {
 
   {"(2"     "---syntax error"}
   {"tan(2)"  "---unknown identifier"}
+
+  {"\\h"    ".*quit" }
+  {"\\v"    "e =.*" }
+  {"\\f"    ".*G.*" }
+  {"\\c"    "" }
+  {"\\g"    "---unknown command" }
+  {""       ""}
+
+  {"1==2"   "---more than one '='" }
+  {"1=2"    "---invalid variable or function name"}
+  {"a=2"    "2.000000" }
 }
 
 global CLIC
@@ -71,6 +83,7 @@ foreach pattern $testdata {
     default { fail $inputs }
     eof { puts "End of file reached" }
   }
+  expect "clic2>" { send "\\q\r"}
 }
 
 spawn $CLIC

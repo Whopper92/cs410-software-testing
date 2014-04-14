@@ -1,4 +1,4 @@
-Test Run By ubuntu on Mon Apr 14 01:53:08 2014
+Test Run By ubuntu on Mon Apr 14 16:27:41 2014
 Native configuration is x86_64-unknown-linux-gnu
 
 		=== clic tests ===
@@ -15,192 +15,309 @@ spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/cli
 Type '\h' to get some help
 clic2> e
 2.718282PASS: e
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> PI
 3.141593PASS: PI
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 1+2
 3.000000PASS: 1+2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (-1)+2
 1.000000PASS: (-1)+2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (-3)+-3
 -6.000000PASS: (-3)+-3
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 1000000000000000000000 + 1000000000000000000000
 2000000000000000000000.000000PASS: 1000000000000000000000 + 1000000000000000000000
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 2-1
 1.000000PASS: 2-1
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 1-3
 -2.000000PASS: 1-3
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (-2)--2
 0.000000PASS: (-2)--2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 2*2
 4.000000PASS: 2*2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 3*0
 0.000000PASS: 3*0
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (-2)*2
 -4.000000PASS: (-2)*2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (-2)*-2
 4.000000PASS: (-2)*-2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 6/3
 2.000000PASS: 6/3
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 3/0
 infPASS: 3/0
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 0/2
 0.000000PASS: 0/2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (-2)/3
 -0.666667PASS: (-2)/3
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 2^3
 8.000000PASS: 2^3
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (2)
 2.000000PASS: (2)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (2+2)*3
 12.000000PASS: (2+2)*3
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (3*(2-2)+(4/2))
 2.000000PASS: (3*(2-2)+(4/2))
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> neg(4)
 -4.000000PASS: neg(4)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> neg(-4)
 4.000000PASS: neg(-4)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> sin(3)
 0.141120PASS: sin(3)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> cos(3)
 -0.989992PASS: cos(3)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> tg(4)
 1.157821PASS: tg(4)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> arcsin(1)
 1.570796PASS: arcsin(1)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> arcsin(5)
 nanPASS: arcsin(5)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> arccos(-1)
 3.141593PASS: arccos(-1)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> arctg(1)
 0.785398PASS: arctg(1)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> exp(2)
 7.389056PASS: exp(2)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> ln(2)
 0.693147PASS: ln(2)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> ln(0)
 -infPASS: ln(0)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> lg(3)
 0.477121PASS: lg(3)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> sqrt(4)
 2.000000PASS: sqrt(4)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> sqrt(-2)
 -nanPASS: sqrt(-2)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> sqrt(5)
 2.236068PASS: sqrt(5)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> cbrt(8)
 2.000000PASS: cbrt(8)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> sh(4)
 27.289917PASS: sh(4)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> ch(4)
 27.308233PASS: ch(4)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> th(4)
 0.999329PASS: th(4)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> erf(2)
 0.995322PASS: erf(2)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> erfc(2)
 0.004678PASS: erfc(2)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> G(3)
 2.000000PASS: G(3)
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> (2
 ---syntax errorPASS: (2
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> tan(2)
 ---unknown identifierPASS: tan(2)
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> \h
+\v - variable list
+\f - function list
+\q - quitPASS: \h
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> \v
+e = 2.718282 (readonly)PASS: \v
+
+PI = 3.141593 (readonly)
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> \f
++
+-
+*
+/
+^
+(
+)
+neg
+nul
+sin
+cos
+tg
+arcsin
+arccos
+arctg
+exp
+ln
+lg
+sqrt
+cbrt
+sh
+ch
+th
+erf
+erfc
+G
+clic2> PASS: \f
 spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
+clic2> PASS: \c
+\c
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> \g
+---unknown commandPASS: \g
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> PASS: 
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> 1==2
+---more than one '='PASS: 1==2
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> 1=2
+---invalid variable or function namePASS: 1=2
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> a=2
+2.000000PASS: a=2
+
+clic2> spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
 clic2> \q
-testcase ./test/clic/test-ops.exp completed in 1 seconds
+testcase ./test/clic/test-ops.exp completed in 11 seconds
 
 		=== clic Summary ===
 
-# of expected passes		46
-runtest completed at Mon Apr 14 01:53:09 2014
+# of expected passes		55
+runtest completed at Mon Apr 14 16:27:52 2014
