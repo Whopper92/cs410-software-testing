@@ -1,0 +1,39 @@
+Test Run By ubuntu on Sun Apr 13 22:24:27 2014
+Native configuration is x86_64-unknown-linux-gnu
+
+		===  tests ===
+
+Schedule of variations:
+    unix
+
+Running target unix
+Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
+Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
+WARNING: Couldn't find tool config file for unix, using default.
+Running ./test/clic/test-ops.exp ...
+ERROR: tcl error sourcing ./test/clic/test-ops.exp.
+ERROR: can't read "CLIC": no such variable
+    while executing
+"eval "spawn $CLIC $inputs""
+    ("foreach" body line 3)
+    invoked from within
+"foreach pattern $testdata {
+  set inputs [lindex $pattern 0]
+  eval "spawn $CLIC $inputs"
+  expect {
+    -re [lindex $pattern 0] {
+      pass $inputs
+..."
+    (file "./test/clic/test-ops.exp" line 8)
+    invoked from within
+"source ./test/clic/test-ops.exp"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 source ./test/clic/test-ops.exp"
+    invoked from within
+"catch "uplevel #0 source $test_file_name""
+testcase ./test/clic/test-ops.exp completed in 0 seconds
+
+		=== clic Summary ===
+
+runtest completed at Sun Apr 13 22:24:27 2014

@@ -1,0 +1,62 @@
+Test Run By ubuntu on Sun Apr 13 23:51:56 2014
+Native configuration is x86_64-unknown-linux-gnu
+
+		=== clic tests ===
+
+Schedule of variations:
+    unix
+
+Running target unix
+Running ./test/clic/test-ops.exp ...
+PASS: e
+PASS: PI
+PASS: ####
+PASS: 1+2
+PASS: (-1)+2
+PASS: (-3)+-3
+PASS: 1000000000000000000000 + 1000000000000000000000
+PASS: 2-1
+PASS: 1-3
+PASS: (-2)--2
+PASS: 2*2
+PASS: 3*0
+PASS: (-2)*2
+PASS: (-2)*-2
+PASS: 6/3
+PASS: 3/0
+PASS: 0/2
+PASS: (-2)/3
+PASS: ####
+PASS: 2^3
+PASS: (2)
+PASS: (2+2)*3
+PASS: (3*(2-2)+(4/2))
+PASS: neg(4)
+PASS: neg(-4)
+PASS: sin(3)
+PASS: cos(3)
+PASS: tg(4)
+PASS: arcsin(1)
+PASS: arcsin(5)
+PASS: arccos(-1)
+PASS: arctg(1)
+PASS: exp(2)
+PASS: ln(2)
+PASS: ln(0)
+PASS: lg(3)
+PASS: sqrt(4)
+PASS: sqrt(-2)
+PASS: sqrt(5)
+PASS: cbrt(8)
+PASS: sh(4)
+PASS: ch(4)
+PASS: th(4)
+PASS: erf(2)
+PASS: erfc(2)
+PASS: G(3)
+PASS: (2
+PASS: tan(2)
+
+		=== clic Summary ===
+
+# of expected passes		48
