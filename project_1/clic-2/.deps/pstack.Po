@@ -1,4 +1,4 @@
-list.o: list.c /usr/include/stdc-predef.h \
+pstack.o: pstack.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/predefs.h /usr/include/stdlib.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -21,7 +21,7 @@ list.o: list.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h list.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h pstack.h
 
 /usr/include/stdc-predef.h:
 
@@ -81,4 +81,4 @@ list.o: list.c /usr/include/stdc-predef.h \
 
 /usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
-list.h:
+pstack.h:

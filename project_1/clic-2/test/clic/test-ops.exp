@@ -1,15 +1,5 @@
 set tool "clic"
 
-#spawn "$CLIC";
-#expect "clic2>" { send "1+2\r" }
-
-#global CLIC
-#expect {
-#    "3.000000" { pass "1+2" }
-#    default   { fail "1+2" }
-#}
-#################################
-
 set testdata {
   {"e"      "2.718282" }
   {"PI"     "3.141593" }
@@ -71,7 +61,7 @@ global CLIC
 foreach pattern $testdata {
   set inputs [lindex $pattern 0]
   append inputs "\r"
-  eval "spawn $CLIC"
+  spawn $CLIC
   expect "clic2>" { send "$inputs"}
 
   expect {
@@ -79,5 +69,12 @@ foreach pattern $testdata {
       pass $inputs
     }
     default { fail $inputs }
+    eof { puts "End of file reached" }
   }
+}
+
+spawn $CLIC
+expect "clic2>" { send "\\q\r"}
+expect {
+  eof        { puts "End of file reached" }
 }

@@ -1,0 +1,149 @@
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:
+        -:    2:#include <stdio.h>
+        -:    3:#include <stdlib.h>
+        -:    4:#include <sys/time.h>
+        -:    5:#include <unistd.h>
+        -:    6:#include <math.h>
+        -:    7:#include <readline/readline.h>
+        -:    8:#include <readline/history.h>
+        -:    9:#include "parser.h"
+        -:   10:
+        -:   11:#define MAX_USER_VARS 1024
+        -:   12:#define MAX_ID_LEN 64
+        -:   13:
+        -:   14:struct user_var {
+        -:   15:	char name[MAX_ID_LEN + 1];
+        -:   16:	double val;
+        -:   17:} vars[MAX_USER_VARS];
+        -:   18:
+        -:   19:int slot = 0;
+        -:   20:
+        -:   21:PARSER *p;
+        -:   22:EXPR *expr;
+        -:   23:
+        1:   24:int main(void)
+        -:   25:{
+        1:   26:	char *es = NULL;
+        -:   27:	int k;
+        -:   28:
+     1025:   29:	for (k = 0; k < MAX_USER_VARS; k++) {
+     1024:   30:		memset(vars[k].name, 0, MAX_ID_LEN + 1);
+     1024:   31:		vars[k].val = 0;
+        -:   32:	};
+        -:   33:
+        1:   34:	p = parser_create(512, 128, 128, 512);
+        1:   35:	if (!p) {
+        -:   36:		printf("Error creating parser\n");
+    #####:   37:		return 1;
+        -:   38:	};
+        -:   39:
+        1:   40:	using_history();
+        -:   41:	printf("Type '\\h' to get some help\n");
+        -:   42:
+        -:   43:	while (1) {
+        -:   44:		char *cp1, *cp2;
+        -:   45:		double r;
+        -:   46:		char *infix;
+        -:   47:
+        1:   48:		if (es)
+    #####:   49:			free(es);
+        1:   50:		es = readline("clic2> ");
+        1:   51:		if (!es)
+    #####:   52:			continue;
+        1:   53:		if (!*es)
+    #####:   54:			continue;
+        1:   55:		add_history(es);
+        -:   56:
+        -:   57:		/* special command */
+        1:   58:		if ((strlen(es) == 2) && (es[0] == '\\')) {
+        1:   59:			switch (es[1]) {
+        -:   60:			case 'q':
+        -:   61:				goto __end;
+        -:   62:			case 'v': 
+    #####:   63:				parser_print_varlist(p);
+    #####:   64:				continue;
+        -:   65:			case 'f': 
+    #####:   66:				parser_print_funclist(p);
+    #####:   67:				continue;
+        -:   68:			case 'c': 
+    #####:   69:				parser_print_constlist(p);
+    #####:   70:				continue;
+        -:   71:			case 'h': 
+        -:   72:				printf("\\v - variable list\n\\f - function list\n\\q - quit\n");
+    #####:   73:				continue;
+        -:   74:			default:
+        -:   75:				printf("---unknown command\n");
+    #####:   76:				continue;
+        -:   77:			}
+        -:   78:		}
+        -:   79:
+    #####:   80:		cp1 = strchr(es, '=');
+    #####:   81:		cp2 = strrchr(es, '=');
+    #####:   82:		if (cp1 != cp2) {
+        -:   83:			printf("---more than one '='\n");
+    #####:   84:			continue;
+        -:   85:		}
+        -:   86:
+    #####:   87:		infix = es;
+        -:   88:
+        -:   89:		/* we have some assignment */
+    #####:   90:		if (cp1) {
+    #####:   91:			cp1[0] = 0;
+    #####:   92:			cp1++;
+        -:   93:
+        -:   94:			/**
+        -:   95:			 *  TODO: add macro support
+        -:   96:			 **/
+        -:   97:
+    #####:   98:			if (slot == MAX_USER_VARS) {
+        -:   99:				printf("---no more space left for variables\n");
+    #####:  100:				continue;
+        -:  101:			}
+    #####:  102:			if (strlen(es) > MAX_ID_LEN) {
+        -:  103:				printf("---identifier is too long\n");
+    #####:  104:				continue;
+        -:  105:			}
+    #####:  106:			memset(vars[slot].name, 0, MAX_ID_LEN + 1);
+    #####:  107:			strcpy(vars[slot].name, es);
+    #####:  108:			infix = cp1;
+        -:  109:		}
+        -:  110:
+        -:  111:		/* calculate the expression */
+    #####:  112:		expr = parser_create_expr(p, infix);
+    #####:  113:		if (!expr) {
+    #####:  114:			printf("---%s\n", parser_errorstr(p->error));
+    #####:  115:			continue;
+        -:  116:		};
+        -:  117:
+        -:  118:		/** 
+        -:  119:		 * uncomment the line below to see expressions in postfix notation
+        -:  120:		 */
+        -:  121:		// parser_print_expr_postfix(p, expr);
+        -:  122:
+    #####:  123:		r = parser_eval_expr(p, expr);
+        -:  124:
+    #####:  125:		if (cp1) {
+        -:  126:			VAR *v;
+    #####:  127:			int exists = 0;
+    #####:  128:			v = parser_create_var(p, vars[slot].name, &vars[slot].val, &exists);
+    #####:  129:			if (!v) {
+    #####:  130:				printf("---%s\n", parser_errorstr(p->error));
+    #####:  131:				continue;
+        -:  132:			}
+    #####:  133:			*(double*)v->loc = r;
+    #####:  134:			if (!exists) /* new var */
+    #####:  135:				slot++;
+        -:  136:		};
+        -:  137:
+        -:  138:		printf("%.6f\n", r);
+        -:  139:	};
+        -:  140:
+        -:  141:      __end:
+        1:  142:	parser_delete(p);
+        1:  143:	return 0;
+        -:  144:}

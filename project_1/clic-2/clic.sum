@@ -1,4 +1,4 @@
-Test Run By ubuntu on Sun Apr 13 23:51:56 2014
+Test Run By ubuntu on Mon Apr 14 01:53:08 2014
 Native configuration is x86_64-unknown-linux-gnu
 
 		=== clic tests ===
@@ -10,7 +10,6 @@ Running target unix
 Running ./test/clic/test-ops.exp ...
 PASS: e
 PASS: PI
-PASS: ####
 PASS: 1+2
 PASS: (-1)+2
 PASS: (-3)+-3
@@ -26,7 +25,6 @@ PASS: 6/3
 PASS: 3/0
 PASS: 0/2
 PASS: (-2)/3
-PASS: ####
 PASS: 2^3
 PASS: (2)
 PASS: (2+2)*3
@@ -59,4 +57,4 @@ PASS: tan(2)
 
 		=== clic Summary ===
 
-# of expected passes		48
+# of expected passes		46

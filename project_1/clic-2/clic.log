@@ -1,15 +1,12 @@
-Test Run By ubuntu on Sun Apr 13 23:51:56 2014
+Test Run By ubuntu on Mon Apr 14 01:53:08 2014
 Native configuration is x86_64-unknown-linux-gnu
 
 		=== clic tests ===
 
-Using /home/ubuntu/boards/standard.exp as standard board description file for build.
-Using /home/ubuntu/boards/standard.exp as standard board description file for host.
 Schedule of variations:
     unix
 
 Running target unix
-Using /home/ubuntu/boards/standard.exp as standard board description file for target.
 Using /usr/share/dejagnu/baseboards/unix.exp as board description file for target.
 Using /usr/share/dejagnu/config/unix.exp as generic interface file for target.
 WARNING: Couldn't find tool config file for unix, using default.
@@ -22,9 +19,6 @@ spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/cli
 Type '\h' to get some help
 clic2> PI
 3.141593PASS: PI
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
-Type '\h' to get some help
-clic2> PASS: ####
 spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 1+2
@@ -85,9 +79,6 @@ spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/cli
 Type '\h' to get some help
 clic2> (-2)/3
 -0.666667PASS: (-2)/3
-spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
-Type '\h' to get some help
-clic2> PASS: ####
 spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
 Type '\h' to get some help
 clic2> 2^3
@@ -204,9 +195,12 @@ spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/cli
 Type '\h' to get some help
 clic2> tan(2)
 ---unknown identifierPASS: tan(2)
+spawn /home/ubuntu/PortlandState/spring2014/softwareTesting/project1/project/clic-2/clic
+Type '\h' to get some help
+clic2> \q
 testcase ./test/clic/test-ops.exp completed in 1 seconds
 
 		=== clic Summary ===
 
-# of expected passes		48
-runtest completed at Sun Apr 13 23:51:57 2014
+# of expected passes		46
+runtest completed at Mon Apr 14 01:53:09 2014

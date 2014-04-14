@@ -94,9 +94,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_clic_OBJECTS = main.$(OBJEXT) parser.$(OBJEXT) list.$(OBJEXT)
+am_clic_OBJECTS = main.$(OBJEXT) parser.$(OBJEXT) list.$(OBJEXT) \
+	pstack.$(OBJEXT)
 clic_OBJECTS = $(am_clic_OBJECTS)
-clic_LDADD = $(LDADD)
 clic_DEPENDENCIES =
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -260,12 +260,13 @@ top_build_prefix =
 top_builddir = .
 top_srcdir = .
 AUTOMAKE_OPTIONS = dejagnu
-clic_SOURCES = main.c parser.c list.c
+clic_SOURCES = main.c parser.c list.c pstack.c
 AM_CPPFLAGS = 
-LDADD = 
+clic_LDADD = -lreadline -ldl -lm
 CLEANFILES = *~
 DISTCLEANFILES = .deps/*.P
 EXTRA_DIST = test
+AM_CFLAGS = --coverage -L/usr/local/lib -I/usr/local/include
 RUNTESTDEFAULTFLAGS = --tool clic CLIC=`pwd`/clic --srcdir $$srcdir/test
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
@@ -377,6 +378,7 @@ distclean-compile:
 include ./$(DEPDIR)/list.Po
 include ./$(DEPDIR)/main.Po
 include ./$(DEPDIR)/parser.Po
+include ./$(DEPDIR)/pstack.Po
 
 .c.o:
 	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
