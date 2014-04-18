@@ -118,7 +118,7 @@ int main(void)
 		/** 
 		 * uncomment the line below to see expressions in postfix notation
 		 */
-		// parser_print_expr_postfix(p, expr);
+		 parser_print_expr_postfix(p, expr);
 
 		r = parser_eval_expr(p, expr);
 
