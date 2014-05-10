@@ -1,3 +1,4 @@
+package stacks;
 import java.util.*;
 
 public class linkedlist implements aStack {
@@ -7,7 +8,7 @@ public class linkedlist implements aStack {
 	public linkedlist() {		
 		head = null;
 	}
-	
+	 
 	@Override
 	public Object push(Object anObj) {
 		if(head != null) {

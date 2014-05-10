@@ -1,3 +1,4 @@
+package stacks;
 import java.util.Stack;
 
 public interface aStack {

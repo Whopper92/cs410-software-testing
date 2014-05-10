@@ -1,3 +1,4 @@
+package stacks;
 import java.util.*;
 
 public class queues implements aStack {
@@ -37,8 +38,12 @@ public class queues implements aStack {
 	@Override
 	public Object peek() {
 		Object placeholder[] = queue1.toArray();
-		Object stackHead = placeholder[queue1.size()-1];
-		return stackHead;
+		if(placeholder.length == 0) {
+			 throw new NoSuchElementException("Stack is empty");
+		} else {
+			Object stackHead = placeholder[queue1.size()-1];
+			return stackHead;
+		}
 	}
 
 	@Override

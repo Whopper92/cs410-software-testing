@@ -1,3 +1,4 @@
+package stacks;
 import java.util.*;
 
 public class array implements aStack {
@@ -35,7 +36,7 @@ public class array implements aStack {
 		int stackElements = getArraySize();
 				
 		if(stackElements == 0) {
-			throw new IndexOutOfBoundsException("Stack is empty");
+			throw new NoSuchElementException("Stack is empty");
 		} else {
 			poppedObj = arrayStack[0];
 			for(int i = 1; i <= stackElements-1; ++i) {

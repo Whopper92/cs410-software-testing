@@ -1,3 +1,4 @@
+package stacks;
 import java.util.*;
 
 public class LLWrapper implements aStack {
@@ -13,7 +14,7 @@ public class LLWrapper implements aStack {
 		list.addFirst(anObj);
 		return anObj;
 	}
-
+	
 	@Override
 	public Object pop() {
 		if(list.size() != 0) {
