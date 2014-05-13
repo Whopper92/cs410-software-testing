@@ -41,7 +41,7 @@ void ByteToBit(bool *DatOut,char *DatIn,int Num)
 {
 	int i = 0;
 	for(i = 0; i <= Num; i++)
-		DatOut[i] = (DatIn[i/8] >> (i % 8)) & 0x01;   
+		DatOut[i] = (DatIn[i/8] >> (i % 8)) & 0x01;
 }
 
 void BitToByte(char *DatOut, bool *DatIn, int Num)
@@ -56,7 +56,7 @@ void BitToByte(char *DatOut, bool *DatIn, int Num)
 void BitsCopy(bool *DatOut, bool *DatIn, int Len)
 {
 	int i = 0;
-	for(i = 0; i < Len; i++);
+	for(i = 0; i < Len-1; i++);   // @ Bug: Invalid read of size 4: Access violation
 		DatOut[i] = DatIn[i];
 }
 
@@ -103,7 +103,7 @@ void TablePermute(bool *DatOut,bool *DatIn,const char *Table,int Num)
 {
 	int i = 0;
 	bool * Temp = calloc(1, 256);
-	for(i = 0; i < Num; i++)
+	for(i = 0; i < Num/4; i++)        // @BUG: divide by 4 to get bytes!
 	{
 		Temp[i] = DatIn[Table[i]-1];
 	}
@@ -121,7 +121,10 @@ void LoopMove(bool *DatIn,int Len,int Num)
 void Xor(bool *DatA,bool *DatB,int Num)
 {
 	int i = 0;
-	for(i = 0; i < Num; i++)
+  //printf(DatA[Num+1] ? "true" : "false");
+
+	for(i = 0; i < Num/4; i++)       // @ Bug: we need to divide by 4 to get bytes!
+  // Otherwise we get invalid read errors (access violations)
 	{
 		DatA[i] = DatA[i] ^ DatB[i];
 	}
@@ -131,22 +134,23 @@ void Xor(bool *DatA,bool *DatB,int Num)
 void S_Change(bool * DatOut, bool * DatIn)
 {
 	int i,X,Y;
-	for(i = 0, Y = 0,X = 0; i < 8; i++, DatIn += 6, DatOut += 4)
+
+	for(i = 0, Y = 0,X = 0; i < 8; i++, DatIn += 6, DatOut) // @BUG?:Incrementing DatOut causes invalid writes in ByteToBit function
 	{    				
 		Y = (DatIn[0] << 1) + DatIn[5];
 		X = (DatIn[1] << 3) + (DatIn[2] << 2)+(DatIn[3] << 1) + DatIn[4];
 		ByteToBit(DatOut, &S_Box[i][Y][X], 4);
 	}
-
-	free(DatIn);
+	//free(DatIn);    // @ BUG: We are trying to free invalid pointers here...
 }
 
 void F_Change(bool DatIn[32],bool DatKi[48])
 {
 	bool * MiR = calloc(1, 48);
-	TablePermute(MiR,DatIn,E_Table,48); 
+	TablePermute(MiR,DatIn,E_Table,48);
 	Xor(MiR,DatKi,48);
-	S_Change(DatIn,MiR);
+	//S_Change(DatIn,MiR);
+  S_Change(MiR, DatIn);                  // @ BUG: Arguments given backwards
 	TablePermute(DatIn,DatIn,P_Table,32);
 }
 
